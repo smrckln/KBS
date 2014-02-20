@@ -30,6 +30,7 @@ class MainScreen(GridLayout):
             gov_names[line] = 0
             
             btn = ToggleButton(text = '%s' % (line), group='gov')
+            btn.id = "btn"
                 
             v_layout.add_widget(btn)
 
@@ -40,6 +41,7 @@ class MainScreen(GridLayout):
             att_gen_names[line] = 0
             
             btn = ToggleButton(text = '%s' % (line), group='att_gen')
+            btn.id = "btn"
             
                 
             v_layout2.add_widget(btn)
@@ -51,6 +53,7 @@ class MainScreen(GridLayout):
             sup_court_names[line] = 0
             
             btn = ToggleButton(text = '%s' % (line))
+            btn.id = "btn"
                 
             v_layout3.add_widget(btn)
 
@@ -58,6 +61,7 @@ class MainScreen(GridLayout):
         h_layout = BoxLayout(padding=20, orientation="horizontal")
 
         vote_btn = Button(text="Vote")
+        vote_btn.bind(on_press=self.vote_clicked)
         h_layout.add_widget(vote_btn)
         
         clear_btn = Button(text="Clear")
@@ -68,6 +72,8 @@ class MainScreen(GridLayout):
         self.add_widget(v_layout2)
         self.add_widget(v_layout3)
         self.add_widget(h_layout)
+
+    
 
     
         
