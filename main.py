@@ -3,7 +3,6 @@ kivy.require('1.8.0')
 
 from kivy.app import App
 from kivy.uix.widget import Widget
-import kivy.base
 from kivy.uix.togglebutton import ToggleButton
 from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
@@ -74,6 +73,10 @@ class MainScreen(GridLayout):
         clear_btn = Button(text="Clear")
         clear_btn.bind(on_press=self.clear_clicked)
         h_layout.add_widget(clear_btn)
+
+        done_btn = Button(text='Print Votes')
+        done_btn.bind(on_press=self.exit_event)
+        h_layout.add_widget(done_btn)
         
         
         self.add_widget(v_layout)
@@ -117,12 +120,13 @@ class MainScreen(GridLayout):
 
     def exit_event(self, *args):
         f = open('results.txt', 'w')
+        f.write('votes: ' + str(self.votes) + '\n')
         for item in self.gov_names.items():
-            f.write(item + '\n')
+            f.write(str(item) + '\n')
         for item in self.att_gen_names.items():
-            f.write(item + '\n')
+            f.write(str(item) + '\n')
         for item in self.sup_court_names.items():
-            f.write(item + '\n')
+            f.write(str(item) + '\n')
                 
             
         
@@ -136,6 +140,7 @@ class VoteApp(App):
     
     def build(self):
         return MainScreen()
+
 
 
 if __name__ == '__main__':
