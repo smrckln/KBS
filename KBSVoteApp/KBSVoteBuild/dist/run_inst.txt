@@ -1,0 +1,5 @@
+To run application simply click on app
+
+To see vote results, right-click on app, show all contents and search for results.txt . This will show total votes recorded and a number of votes next to each name.
+
+Current names need to be changed. Filler names are used currently. To change search for gov_names.txt, att_gen_names.txt, and sup_court_names.txt in all app contents. Simply edit and save these files.
