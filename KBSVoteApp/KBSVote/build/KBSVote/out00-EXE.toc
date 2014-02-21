@@ -1,9 +1,0 @@
-('/Users/samricklin/Downloads/PyInstaller-2.1/KBSVote/build/KBSVote/KBSVote',
- True,
- False,
- None,
- None,
- [],
- None,
- False,
- 1392967831)

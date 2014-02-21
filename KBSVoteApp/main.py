@@ -100,6 +100,14 @@ class MainScreen(GridLayout):
                 if temp[i].id == 'sup_court_btn':
                     if temp[i].state == 'down':
                         self.sup_court_names[temp[i].text] += 1
+
+        for i in range(len(layout)):
+            temp = layout[i].children
+            for i in range(len(temp)):
+                if temp[i].id == 'gov_btn' or temp[i].id == 'att_gen_btn' or temp[i].id == 'sup_court_btn':
+                    if temp[i].state == 'down':
+                        temp[i].state = 'normal'
+                
                         
         print self.gov_names.items()
         print self.att_gen_names.items()
