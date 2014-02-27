@@ -1,0 +1,11 @@
+votes: 1
+('James Buchanan', 0)
+('Bob', 0)
+('Jimbo', 1)
+('Paul', 0)
+('Paul', 0)
+('Jim', 0)
+('Sam', 1)
+('jgaks', 0)
+('alsdkfal', 0)
+('kasldfk', 1)

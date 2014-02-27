@@ -11,7 +11,7 @@ v1.0
 import kivy
 kivy.require('1.8.0')
 
-import sys
+import sys, os, shutil
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.uix.togglebutton import ToggleButton
@@ -146,6 +146,12 @@ class MainScreen(GridLayout):
             f.write(str(item) + '\n')
         for item in self.sup_court_names.items():
             f.write(str(item) + '\n')
+
+        fpath = os.getcwd() + "/results.txt"
+        
+        f.close()
+
+        shutil.copy2(fpath, os.path.join(os.getenv("HOME"), "Desktop"))
 
         sys.exit()
                 
